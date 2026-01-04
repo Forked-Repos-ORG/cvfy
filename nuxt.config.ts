@@ -42,7 +42,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@pinia/nuxt',
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
