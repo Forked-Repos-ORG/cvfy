@@ -43,5 +43,11 @@
   },
   "overrides": {
     "estree-walker": "2.0.2"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": ["linux", "darwin", "win32"],
+      "cpu": ["x64", "arm64"]
+    }
   }
 }
