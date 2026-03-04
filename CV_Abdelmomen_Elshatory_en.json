@@ -1,0 +1,143 @@
+{
+  "formSettings": {
+    "layout": "one-column",
+    "profileImageDataUri": null,
+    "jobTitle": "Frontend Developer | Vue.js & Nuxt.js",
+    "name": "Abdelmomen",
+    "lastName": "Elshatory",
+    "email": "abdelmomenelshatory@gmail.com",
+    "location": "Egypt",
+    "phoneNumber": "01064053748",
+    "aboutme": "Mid-Level Frontend Developer with 4+ years of professional experience building responsive, high-performance web applications using JavaScript, Vue.js, and Nuxt.js. Skilled in state management with Vuex and Pinia, RESTful API integration, and delivering pixel-perfect implementations from UI/UX wireframes. Experienced in collaborative Git workflows, end-to-end testing with Playwright, and applying Design Systems principles. Focused on Core Web Vitals, performance optimization, and cross-browser compatibility to deliver exceptional user experiences.",
+    "jobSkills": [
+      "JavaScript (ES6+)",
+      "Vue.js",
+      "Nuxt.js",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "RESTful APIs",
+      "Vuex",
+      "Pinia",
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Playwright",
+      "Design Systems",
+      "Core Web Vitals",
+      "Performance Optimization",
+      "Cross-Browser Compatibility",
+      "TailwindCSS",
+      "Bootstrap",
+      "SASS/SCSS",
+      "PWA",
+      "UI/UX Design Integration"
+    ],
+    "softSkills": [
+      "Collaboration",
+      "Problem-Solving",
+      "Communication",
+      "Attention to Detail",
+      "Time Management",
+      "Adaptability",
+      "Self-Motivated Learner"
+    ],
+    "languages": [
+      {
+        "lang": "English",
+        "level": "native-bilingual"
+      }
+    ],
+    "interests": [
+      "Politics",
+      "Organize my agenda"
+    ],
+    "linkedin": "beingmomen",
+    "twitter": "",
+    "github": "beingmomen",
+    "website": "beingmomen.com",
+    "education": [
+      {
+        "id": "1",
+        "title": "BACHELOR OF INFORMATION SYSTEMS AND ADMINISTRATIVE",
+        "location": "Abukir High Institutes",
+        "from": "2014-10-01",
+        "to": "2018-06-30",
+        "current": false,
+        "summary": "<p></p>",
+        "displayDate": false
+      }
+    ],
+    "work": [
+      {
+        "id": "a0f24733-2dad-40c9-addf-ffdee3627d47",
+        "title": "Software Developer (Intern) | Frontend",
+        "location": "Alexandria",
+        "from": "2021-01-01",
+        "to": "2021-10-31",
+        "current": false,
+        "summary": "<ul><li><p>Built responsive web pages from UI/UX wireframes using HTML5, CSS3, and JavaScript, ensuring cross-browser compatibility.</p></li><li><p>Collaborated with senior developers using Git for version control and participated in code review workflows.</p></li><li><p>Developed interactive UI components with Vue.js, focusing on clean, maintainable code.</p></li><li><p>Integrated RESTful APIs to display dynamic data, collaborating with backend teams using Laravel Blade and API-based architectures.</p></li><li><p>Gained foundational experience in responsive design principles using Bootstrap and CSS media queries.</p></li></ul>",
+        "displayDate": true,
+        "company": "HMASERV",
+        "companyUrl": "https://www.hmaserv.com/"
+      },
+      {
+        "id": "2",
+        "title": "Software Developer (Junior) | Frontend",
+        "location": "Alexandria",
+        "from": "2021-11-02",
+        "to": "2022-03-01",
+        "current": false,
+        "summary": "<ul><li><p>Developed and maintained responsive web applications using Vue.js and Nuxt.js with a focus on performance optimization.</p></li><li><p>Managed application state using Vuex, implementing structured store modules for scalable data flow.</p></li><li><p>Integrated RESTful APIs for data fetching, form submissions, and real-time content updates.</p></li><li><p>Participated in collaborative Git workflows including branching strategies, pull requests, and code reviews on GitHub/GitLab.</p></li><li><p>Translated Adobe XD design files into fully functional, pixel-perfect websites with TailwindCSS and SASS/SCSS, ensuring cross-device compatibility.</p></li></ul>",
+        "displayDate": true,
+        "companyUrl": "https://www.hmaserv.com/",
+        "company": "HMASERV"
+      },
+      {
+        "id": "1",
+        "title": "Software Engineer | Mid-Senior Frontend",
+        "location": "Libya",
+        "from": "2022-03-01",
+        "to": "2012-01-31T22:00:00.000Z",
+        "current": true,
+        "summary": "<ul><li><p>Lead frontend development of web applications using Vue.js, Nuxt.js, and JavaScript (ES6+), delivering performant and accessible user interfaces.</p></li><li><p>Architect and implement state management solutions using Vuex and Pinia, ensuring predictable data flow across complex application modules.</p></li><li><p>Design and consume RESTful APIs, collaborating with backend teams to define contracts and optimize payload structures.</p></li><li><p>Champion performance optimization practices including Core Web Vitals monitoring, lazy loading, code splitting, and image optimization.</p></li><li><p>Implement end-to-end testing workflows using Playwright to ensure application reliability and catch regressions.</p></li><li><p>Contribute to Design Systems by building reusable, documented Vue.js components for consistent UI patterns across projects.</p></li><li><p>Manage collaborative Git workflows, conduct code reviews, and mentor junior developers on best practices.</p></li><li><p>Build responsive, mobile-first layouts using TailwindCSS with full cross-browser compatibility.</p></li></ul>",
+        "displayDate": true,
+        "company": "Nanosoft",
+        "companyUrl": "https://nanosoft.ly/"
+      }
+    ],
+    "projects": [
+      {
+        "id": "b973d1ff-72df-4a29-90d3-627424dc02bb",
+        "title": "Essam Fahmy Website",
+        "location": "essamfahmy.io",
+        "from": "2025-01-07T14:37:06.489Z",
+        "to": "2025-01-07T14:37:06.489Z",
+        "current": false,
+        "summary": "<ul><li><p>Built a fully responsive, SEO-optimized website using Nuxt 3 and TailwindCSS with server-side rendering for improved Core Web Vitals scores.</p></li><li><p>Implemented dynamic content loading via RESTful API integration with structured state management using Pinia.</p></li><li><p>Ensured cross-browser compatibility and mobile-first responsive design across all major browsers and devices.</p></li><li><p>Optimized performance through image lazy loading, component code splitting, and efficient asset delivery.</p></li></ul>",
+        "displayDate": false
+      },
+      {
+        "id": "bf413131-8e96-4d11-97f6-1298a353c9ae",
+        "title": "Dream TV Website",
+        "location": "dreamplayer.org",
+        "from": "2025-01-07T14:33:11.608Z",
+        "to": "2025-01-07T14:33:11.608Z",
+        "current": false,
+        "summary": "<ul><li><p>Developed a responsive media platform interface using Bootstrap and JavaScript, ensuring consistent user experience across devices.</p></li><li><p>Integrated RESTful APIs for dynamic content delivery including video listings and category filtering.</p></li><li><p>Implemented responsive design patterns with cross-browser compatibility testing across Chrome, Firefox, Safari, and Edge.</p></li></ul>",
+        "displayDate": false
+      }
+    ],
+    "displaySocial": true,
+    "displayEducation": true,
+    "displayProjects": true,
+    "activeColor": "#1F2937",
+    "displayJobSkills": true,
+    "displaySoftSkills": true,
+    "displayLanguages": false,
+    "displayInterests": false,
+    "address": "Abou Qir",
+    "city": "Alexandria",
+    "country": "Egypt"
+  }
+}
