@@ -3,16 +3,16 @@
 
 <template>
   <div class="flex justify-between gap-1">
-    <div class="flex flex-col gap-1 justify-between">
+    <div class="flex flex-col gap-1">
       <div class="flex flex-col justify-center">
         <CvPreviewName />
         <CvPreviewTitle />
-        <CvPreviewAbout class="mt-0" />
       </div>
-      <div class="flex gap-2">
+      <div class="flex flex-col gap-1">
         <CvPreviewContact />
         <CvPreviewSocial />
       </div>
+      <CvPreviewAbout class="mt-3" />
     </div>
     <CvProfileImageViewer class="rounded ml-2" />
   </div>
@@ -28,7 +28,6 @@
 
 <style lang="postcss" scoped>
 :deep(h4.cv__section-title) {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

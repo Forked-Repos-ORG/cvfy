@@ -11,7 +11,7 @@ defineProps<Props>()
   <!-- rel="noopener" -->
   <a
     v-if="href"
-    class="w-fit flex items-center font-medium italic text-underline before:bg-slate-700"
+    class="w-fit flex items-center font-medium italic text-underline"
     target="_blank"
     :href="`https://${href.replace(/https?:\/\//, '')}`"
     :aria-label="`Open ${title} project in new tab`"
@@ -24,17 +24,8 @@ defineProps<Props>()
 </template>
 
 <style lang="postcss" scoped>
+/* a border, not an absolutely positioned ::before, so the link stays in normal paint order (PDF text order) */
 .text-underline {
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -2px;
-        right: -2px;
-        width: 100%;
-        height: 1px;
-    }
+    border-bottom: 1px solid #334155; /* slate-700 */
 }
 </style>

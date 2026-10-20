@@ -10,8 +10,8 @@ const { formSettings } = useCvState()
     class="cv__section"
   >
     <h4
+      v-if="formSettings.layout !== 'one-column'"
       class="cv__section-title"
-      :class="formSettings.layout === 'one-column' && 'sr-only'"
     >
       {{ $t("social") }}
     </h4>
@@ -37,7 +37,7 @@ const { formSettings } = useCvState()
           class="linkedin-profile"
           aria-label="LinkedIn Profile"
         >
-          <span class="sr-only">https://linkedin.com/in/</span>{{ formSettings.linkedin }}
+          <span v-if="formSettings.layout !== 'one-column'" class="sr-only">https://linkedin.com/in/</span>{{ formSettings.linkedin }}
         </a>
       </div>
       <div
@@ -54,7 +54,7 @@ const { formSettings } = useCvState()
           :href="`https://twitter.com/${formSettings.twitter}`"
           aria-label="Twitter Profile"
         >
-          <span class="sr-only">https://twitter.com/</span>{{ formSettings.twitter }}
+          <span v-if="formSettings.layout !== 'one-column'" class="sr-only">https://twitter.com/</span>{{ formSettings.twitter }}
         </a>
       </div>
       <div
@@ -71,7 +71,7 @@ const { formSettings } = useCvState()
           :href="`https://github.com/${formSettings.github}`"
           aria-label="GitHub Profile"
         >
-          <span class="sr-only">https://github.com/</span>{{ formSettings.github }}
+          <span v-if="formSettings.layout !== 'one-column'" class="sr-only">https://github.com/</span>{{ formSettings.github }}
         </a>
       </div>
       <div

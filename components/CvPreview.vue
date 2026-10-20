@@ -166,6 +166,10 @@ p {
     }
   }
 
+  :deep(.ProseMirror) {
+    position: static;
+  }
+
   :deep(&__event) {
     display: flex;
     flex-direction: column;

@@ -17,7 +17,7 @@ const workSorted = computed(() => {
     <h4 class="cv__section-title cv__section-title--main">
       {{ $t("experience") }}
     </h4>
-    <ul class="cv__event relative">
+    <ul class="cv__event">
       <li
         v-for="job in workSorted"
         :key="job.id"
