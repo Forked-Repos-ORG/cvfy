@@ -7,8 +7,9 @@ const emailHref = computed(() => {
   return `mailto:${formSettings.value.email}`
 })
 const phoneNumberHref = computed(() => {
-  return `tel:${formSettings.value.phoneNumber}`
+  return `tel:${formSettings.value.phoneNumber.replace(/[^\d+]/g, '')}`
 })
+const location = computed(() => formSettings.value.location?.trim())
 </script>
 
 <template>
@@ -17,8 +18,9 @@ const phoneNumberHref = computed(() => {
     :class="formSettings.layout === 'one-column' && 'mt-0'"
   >
     <h4
+      v-if="formSettings.layout !== 'one-column'"
       class="cv__section-title"
-      :class="[{ 'sr-only': formSettings.layout === 'one-column' }]">
+    >
       {{ $t("contact") }}
     </h4>
     <div
@@ -50,13 +52,20 @@ const phoneNumberHref = computed(() => {
         >{{ formSettings.phoneNumber }}</a>
       </div>
       <div
-        v-if="formSettings.address || formSettings.city || formSettings.country"
+        v-if="location || formSettings.address || formSettings.city || formSettings.country"
         class="cv__icon-wrapper"
       >
         <svg class="cv__icon">
           <use href="@/assets/sprite.svg#location" />
         </svg>
-        <span class="address">
+        <span
+          v-if="location"
+          class="address"
+        >{{ location }}</span>
+        <span
+          v-else
+          class="address"
+        >
           <template v-if="formSettings.address">{{ formSettings.address }}, </template>
           <template v-if="formSettings.city">{{ formSettings.city }}, </template>
           <template v-if="formSettings.country">{{ formSettings.country }}</template>
