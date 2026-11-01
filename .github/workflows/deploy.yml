@@ -1,0 +1,51 @@
+name: Deploy cv.beingmomen.com to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cv-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static site
+        run: pnpm run generate
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" | tr -d '\r' > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]')
+          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+
+      - name: Rsync to VPS
+        run: |
+          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]')
+          VPS_USER=$(echo "${{ secrets.VPS_USER }}" | tr -d '[:space:]')
+          rsync -avz --delete \
+            --exclude='.well-known/' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
+            ./dist/ "$VPS_USER@$VPS_HOST:htdocs/cv.beingmomen.com/"
