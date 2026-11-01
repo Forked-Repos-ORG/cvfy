@@ -45,15 +45,15 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" | tr -d '\r' > ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" | tr -d '\r' | sed $'s/^\xEF\xBB\xBF//' > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]')
+          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]' | sed $'s/^\xEF\xBB\xBF//')
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
 
       - name: Rsync to VPS
         run: |
-          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]')
-          VPS_USER=$(echo "${{ secrets.VPS_USER }}" | tr -d '[:space:]')
+          VPS_HOST=$(echo "${{ secrets.VPS_HOST }}" | tr -d '[:space:]' | sed $'s/^\xEF\xBB\xBF//')
+          VPS_USER=$(echo "${{ secrets.VPS_USER }}" | tr -d '[:space:]' | sed $'s/^\xEF\xBB\xBF//')
           rsync -avz --delete \
             --exclude='.well-known/' \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
