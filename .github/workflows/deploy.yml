@@ -16,6 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install libjemalloc
+        run: sudo apt-get update && sudo apt-get install -y libjemalloc2
+
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -33,6 +36,10 @@ jobs:
       - name: Build static site
         run: pnpm run generate
         env:
+          LD_PRELOAD: /usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+          MALLOC_ARENA_MAX: 2
+          VIPS_CONCURRENCY: 1
+          UV_THREADPOOL_SIZE: 1
           NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Set up SSH
