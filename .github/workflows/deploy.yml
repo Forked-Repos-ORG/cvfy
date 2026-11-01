@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: '.nvmrc'
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -32,6 +32,8 @@ jobs:
 
       - name: Build static site
         run: pnpm run generate
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Set up SSH
         run: |
